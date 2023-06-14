@@ -29,6 +29,6 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private boolean isWater(Material material) {
-        return material == Material.WATER || material == Material.SEAGRASS || material == Material.KELP;
+        return material == Material.WATER || material == Material.SEAGRASS || material == Material.TALL_SEAGRASS || material == Material.KELP;
     }
 }

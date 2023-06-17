@@ -8,7 +8,40 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main extends JavaPlugin implements Listener {
+
+    private static final Set<Material> WATER_MATERIALS = new HashSet<>(Arrays.asList(
+            Material.WATER,
+            Material.SEAGRASS,
+            Material.TALL_SEAGRASS,
+            Material.KELP,
+            Material.SEA_PICKLE,
+            Material.TURTLE_EGG,
+            Material.TUBE_CORAL,
+            Material.TUBE_CORAL_FAN,
+            Material.BRAIN_CORAL,
+            Material.BRAIN_CORAL_FAN,
+            Material.BUBBLE_CORAL,
+            Material.BUBBLE_CORAL_FAN,
+            Material.FIRE_CORAL,
+            Material.FIRE_CORAL_FAN,
+            Material.HORN_CORAL,
+            Material.HORN_CORAL_FAN,
+            Material.DEAD_TUBE_CORAL,
+            Material.DEAD_BRAIN_CORAL,
+            Material.DEAD_BUBBLE_CORAL,
+            Material.DEAD_FIRE_CORAL,
+            Material.DEAD_HORN_CORAL,
+            Material.DEAD_TUBE_CORAL_FAN,
+            Material.DEAD_BRAIN_CORAL_FAN,
+            Material.DEAD_BUBBLE_CORAL_FAN,
+            Material.DEAD_FIRE_CORAL_FAN,
+            Material.DEAD_HORN_CORAL_FAN
+    ));
 
     @Override
     public void onEnable() {
@@ -29,6 +62,6 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private boolean isWater(Material material) {
-        return material == Material.WATER || material == Material.SEAGRASS || material == Material.TALL_SEAGRASS || material == Material.KELP;
+        return WATER_MATERIALS.contains(material);
     }
 }
